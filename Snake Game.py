@@ -1,7 +1,6 @@
 import turtle
 import random
 
-# Constants
 WIDTH = 500
 HEIGHT = 500
 FOOD_SIZE = 10
@@ -41,9 +40,8 @@ def move_snake():
     else:
         snake.append(new_head)
         if not food_collision():
-            snake.pop(0)  # Keep the snake the same length unless fed.
+            snake.pop(0) 
 
-        # Allow screen wrapping
         if snake[-1][0] > WIDTH / 2:
             snake[-1][0] -= WIDTH
         elif snake[-1][0] < - WIDTH / 2:
@@ -61,7 +59,6 @@ def move_snake():
             pen.goto(segment[0], segment[1])
             pen.stamp()
 
-        # Refresh screen
         screen.update()
 
         # Rinse and repeat
